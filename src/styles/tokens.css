@@ -1,0 +1,70 @@
+/* ======================================================================
+   DESIGN TOKENS
+   - Global variables for colors, spacing, typography, shadows, radius
+   - Single source of truth for the whole website
+   ====================================================================== */
+
+:root {
+  /* ===== Layout ===== */
+  --container-max: 1120px;
+
+  /* ===== Spacing Scale (8px-ish system) ===== */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+
+  /* ===== Radius ===== */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  /* ===== Colors (professional palette) ===== */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+
+  --border: rgba(15, 23, 42, 0.12);
+
+  --brand: #0ea5e9;    /* sky */
+  --brand-600: #0284c7;
+  --accent: #22c55e;   /* green */
+
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 6px 18px rgba(2, 6, 23, 0.06);
+  --shadow-md: 0 10px 30px rgba(2, 6, 23, 0.08);
+
+  /* ===== Typography ===== */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Font sizes */
+  --text-sm: 0.95rem;
+  --text-base: 1rem;
+  --text-lg: 1.15rem;
+
+  /* Heading sizes */
+  --h1: clamp(2rem, 4vw, 3rem);
+  --h2: clamp(1.5rem, 3vw, 2.25rem);
+  --h3: 1.35rem;
+
+  /* Line heights */
+  --lh-tight: 1.15;
+  --lh-base: 1.5;
+
+  /* Motion */
+  --ease: 200ms ease;
+}
+
+/* Optional: better default text rendering */
+html {
+  text-rendering: optimizeLegibility;
+}

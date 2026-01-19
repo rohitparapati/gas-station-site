@@ -1,0 +1,136 @@
+/* ======================================================================
+   UI COMPONENT PRIMITIVES
+   - Buttons, cards, badges, form basics
+   - These are reusable building blocks for later sections
+   ====================================================================== */
+
+/* ===== Focus styles (Accessibility) ===== */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.35);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== Typography ===== */
+body {
+  font-family: var(--font-sans);
+  line-height: var(--lh-base);
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--h1);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--h2);
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-base);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--muted);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 0.6rem 0.95rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Primary button */
+.btn--primary {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(2, 132, 199, 0.95));
+  color: #fff;
+  border-color: rgba(2, 132, 199, 0.55);
+}
+
+/* Secondary button */
+.btn--ghost {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ===== Badge ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--muted);
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.card__title {
+  margin-bottom: var(--space-2);
+  color: var(--text);
+}
+
+.card__text {
+  color: var(--muted);
+}
+
+/* ===== Links ===== */
+.link {
+  color: var(--brand-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

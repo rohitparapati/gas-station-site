@@ -1,0 +1,64 @@
+/* ======================================================================
+   LAYOUT HELPERS
+   - Container, sections, grids, page spacing
+   - Keep these generic so they can be reused anywhere
+   ====================================================================== */
+
+/* ===== Container ===== */
+.container {
+  width: min(var(--container-max), calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* ===== Section spacing ===== */
+.section {
+  padding: var(--space-7) 0;
+}
+
+.section--tight {
+  padding: var(--space-6) 0;
+}
+
+/* ===== Page wrapper ===== */
+.page {
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+/* ===== Simple responsive grids ===== */
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Stack helper (vertical spacing) ===== */
+.stack > * + * {
+  margin-top: var(--space-3);
+}
+
+/* ===== Divider ===== */
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--space-6) 0;
+}
